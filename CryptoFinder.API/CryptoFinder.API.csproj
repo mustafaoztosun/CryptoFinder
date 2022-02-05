@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CryptoFinder.Business\CryptoFinder.Business.csproj" />
+    <ProjectReference Include="..\CryptoFinder.DataAccess\CryptoFinder.DataAccess.csproj" />
+    <ProjectReference Include="..\CryptoFinder.Entities\CryptoFinder.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

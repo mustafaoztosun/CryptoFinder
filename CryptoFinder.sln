@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoFinder.Entities", "CryptoFinder.Entities\CryptoFinder.Entities.csproj", "{2C205A9C-1F18-4474-B8AD-92F7EDD10F53}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CryptoFinder.DataAccess", "CryptoFinder.DataAccess\CryptoFinder.DataAccess.csproj", "{04BE5879-FC26-438D-9622-DCCCA61365E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoFinder.Business", "CryptoFinder.Business\CryptoFinder.Business.csproj", "{55A5210C-E8CB-48BF-A557-20F453F85E4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CryptoFinder.API", "CryptoFinder.API\CryptoFinder.API.csproj", "{F39A9011-D882-4C8C-9122-9F25AAC0FE7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2C205A9C-1F18-4474-B8AD-92F7EDD10F53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C205A9C-1F18-4474-B8AD-92F7EDD10F53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C205A9C-1F18-4474-B8AD-92F7EDD10F53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C205A9C-1F18-4474-B8AD-92F7EDD10F53}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04BE5879-FC26-438D-9622-DCCCA61365E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04BE5879-FC26-438D-9622-DCCCA61365E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04BE5879-FC26-438D-9622-DCCCA61365E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04BE5879-FC26-438D-9622-DCCCA61365E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55A5210C-E8CB-48BF-A557-20F453F85E4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55A5210C-E8CB-48BF-A557-20F453F85E4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55A5210C-E8CB-48BF-A557-20F453F85E4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55A5210C-E8CB-48BF-A557-20F453F85E4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F39A9011-D882-4C8C-9122-9F25AAC0FE7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F39A9011-D882-4C8C-9122-9F25AAC0FE7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F39A9011-D882-4C8C-9122-9F25AAC0FE7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F39A9011-D882-4C8C-9122-9F25AAC0FE7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C9E1ACD3-78B2-4DA2-B8AA-A8AF0D29A095}
+	EndGlobalSection
+EndGlobal
