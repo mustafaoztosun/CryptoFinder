@@ -24,6 +24,20 @@ namespace CryptoFinder.API
             services.AddControllers();
             services.AddSingleton<ICryptoService, CryptoManager>();
             services.AddSingleton<ICryptoRepository, CryptoRepository>();
+            //Swagger is added
+            //I edited the information on the main page with these codes
+            services.AddSwaggerDocument(config=> {
+                config.PostProcess = (doc => {
+                    doc.Info.Title = "All Crypto API";
+                    doc.Info.Version = "1.1.13";
+                    doc.Info.Contact = new NSwag.OpenApiContact()
+                    {
+                        Name = "Mustafa Öztosun",
+                        Url = "https://www.youtube.com/channel/UCcOh6L0uE06LJJdR-plCcEg",
+                        Email = "mustafaoztosun.g@gmial.com"
+                    };
+                });
+            });
 
         }
 
@@ -36,6 +50,8 @@ namespace CryptoFinder.API
             }
 
             app.UseRouting();
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseEndpoints(endpoints =>
             {

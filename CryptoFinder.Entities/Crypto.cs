@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 //to the tables in the database.
 namespace CryptoFinder.Entities
 {
+    //The requirement of the relevant fields was provided with the "Required" rule.
     public class Crypto
     {
         //The Id field is written to be the Primary Key and to start from Id 1.

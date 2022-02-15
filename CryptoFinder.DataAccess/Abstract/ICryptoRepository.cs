@@ -2,20 +2,24 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CryptoFinder.DataAccess.Abstract
 {
     public interface ICryptoRepository
     {
-        List<Crypto> GetAllCrypto();
+        //All Methods are made asynchronous
+        Task<List<Crypto>> GetAllCrypto();
+        
+        Task<Crypto> GetCryptoById(int id);
 
-        Crypto GetCryptoById(int id);
+        Task<Crypto> GetCryptoByName(string name);
 
-        Crypto CreateCrypto(Crypto crypto);
+        Task<Crypto> CreateCrypto(Crypto crypto);
 
-        Crypto UpdateCrypto(Crypto crypto);
+        Task<Crypto> UpdateCrypto(Crypto crypto);
 
-        void DeleteCrypto(int id);
-        List<Crypto> GetAllCryptos();
+        Task DeleteCrypto(int id);
+        Task<List<Crypto>> GetAllCryptos();
     }
 }

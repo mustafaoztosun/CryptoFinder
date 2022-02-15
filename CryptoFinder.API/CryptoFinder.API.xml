@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CryptoFinder.API</name>
+    </assembly>
+    <members>
+        <member name="M:CryptoFinder.API.Controllers.CryptosController.Get">
+            <summary>
+            Get All Cryptos
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:CryptoFinder.API.Controllers.CryptosController.GetCryptoById(System.Int32)">
+            <summary>
+            Get Crypto By Id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CryptoFinder.API.Controllers.CryptosController.CreateCrypto(CryptoFinder.Entities.Crypto)">
+            <summary>
+            Create an Crypto
+            </summary>
+            <param name="crypto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CryptoFinder.API.Controllers.CryptosController.UpdateCrypto(CryptoFinder.Entities.Crypto)">
+            <summary>
+            Update the Crypto
+            </summary>
+            <param name="crypto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CryptoFinder.API.Controllers.CryptosController.DeleteCrypto(System.Int32)">
+            <summary>
+            Delete the Crypto
+            </summary>
+            <param name="id"></param>
+        </member>
+    </members>
+</doc>

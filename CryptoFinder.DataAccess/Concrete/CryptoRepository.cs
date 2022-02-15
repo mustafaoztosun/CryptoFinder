@@ -1,9 +1,11 @@
 ﻿using CryptoFinder.DataAccess.Abstract;
 using CryptoFinder.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CryptoFinder.DataAccess.Conctare
 {
@@ -12,59 +14,67 @@ namespace CryptoFinder.DataAccess.Conctare
     public class CryptoRepository : ICryptoRepository
     {
         //Adding a new data is provided here
-        public Crypto CreateCrypto(Crypto crypto)
+        public async Task<Crypto> CreateCrypto(Crypto crypto)
         {
             using (var cryptoDbContext = new CryptoDbContext())
             {
                 cryptoDbContext.Cryptos.Add(crypto);
-                cryptoDbContext.SaveChanges();
+                await cryptoDbContext.SaveChangesAsync();
                 return crypto;
             }
         }
         //Line of code to delete selected data
-        public void DeleteCrypto(int id)
+        public async Task DeleteCrypto(int id)
         {
             using (var cryptoDbContext = new CryptoDbContext())
             {
-                var deletedCrypto = GetCryptoById(id);
+                var deletedCrypto = await GetCryptoById(id);
                 cryptoDbContext.Cryptos.Remove(deletedCrypto);
-                cryptoDbContext.SaveChanges();
+                await cryptoDbContext.SaveChangesAsync();
             }
         }
 
         //Showing all added data
-        public List<Crypto> GetAllCrypto()
+        public async Task<List<Crypto>> GetAllCrypto()
         {
             using (var cryptoDbContext = new CryptoDbContext())
             {
-                return cryptoDbContext.Cryptos.ToList();
+                return await cryptoDbContext.Cryptos.ToListAsync();
             }
         }
 
-        public List<Crypto> GetAllCryptos()
+        public async Task<List<Crypto>> GetAllCryptos()
         {
             using (var cryptoDbContext = new CryptoDbContext())
             {
-                return cryptoDbContext.Cryptos.ToList();
+                return await cryptoDbContext.Cryptos.ToListAsync();
             }
         }
 
-        public Crypto GetCryptoById(int id)
+        public async Task<Crypto> GetCryptoById(int id)
         {
             //Since ID is the primary key, we used the Find method
             using (var cryptoDbContext = new CryptoDbContext())
             {
-                return cryptoDbContext.Cryptos.Find(id);
+                return await cryptoDbContext.Cryptos.FindAsync(id);
+            }
+        }
+
+        public async Task<Crypto> GetCryptoByName(string name)
+        {
+            using (var cryptoDbContext = new CryptoDbContext())
+            {
+                return await cryptoDbContext.Cryptos.FirstOrDefaultAsync(x => x.Name.ToLower()==name.ToLower());
             }
         }
 
         //Where added data is updated
-        public Crypto UpdateCrypto(Crypto crypto)
+        public async Task<Crypto> UpdateCrypto(Crypto crypto)
         {
             using (var cryptoDbContext = new CryptoDbContext())
             {
                 cryptoDbContext.Cryptos.Update(crypto);
-                cryptoDbContext.SaveChanges();
+                await cryptoDbContext.SaveChangesAsync();
                 return crypto;
             }
         }
